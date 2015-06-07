@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('alchemy_cms', ['~> 3.1'])
   gem.add_dependency('spree', ['>= 3.0', '< 4.0'])
+  gem.add_dependency('spree_i18n', ['>= 3.0', '< 4.0'])
 end
