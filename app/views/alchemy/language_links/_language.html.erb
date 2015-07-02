@@ -3,7 +3,7 @@
 <% css_classes << 'first' if languages.first == language %>
 <% css_classes << 'last' if languages.last == language %>
 <% link_title = options[:show_title] ? _t("#{language.code}.title", scope: 'language_links', default: language.name) : nil %>
-<% dst_page = Alchemy::Page.where(page_layout: @page.try(:page_layout), language_code: language.code).take || language.pages.language_roots.first %>
+<% dst_page = @page.equivalent_for_lang(language) %>
 
 <%= link_to(
       content_tag(:span, language.label(options[:linkname])).html_safe,

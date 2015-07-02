@@ -8,3 +8,6 @@ Alchemy::Modules.register_module({
     image: 'alchemy_spree/alchemy_module_icon.png'
   }
 })
+
+
+require 'decorators/models/alchemy/page_decorator'
